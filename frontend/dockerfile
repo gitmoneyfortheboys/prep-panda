@@ -1,13 +1,25 @@
 FROM node:14.10.1-alpine3.12
 
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-COPY package*.json ./
+# Install create-react-app
+RUN npm install -g create-react-app
 
-RUN npm install
+# Create a new React app
+RUN create-react-app my-app
 
+# Move into the app directory
+WORKDIR /usr/src/app/my-app
+
+# Copy the app source code
 COPY . .
 
+# Install dependencies
+RUN npm install
+
+# Expose the development server port
 EXPOSE 3000
 
+# Start the development server
 CMD ["npm", "start"]
