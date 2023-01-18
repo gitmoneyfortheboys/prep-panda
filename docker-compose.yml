@@ -12,3 +12,10 @@ services:
       - "8000:8000"
     depends_on:
       - postgres
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web
