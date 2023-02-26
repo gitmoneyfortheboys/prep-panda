@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    /* Adjust font sizes */
+    h2 {
+      font-size: 1rem;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  
+    /* Adjust container size */
+    div {
+      width: 90%;
+    }
+  }
+  
