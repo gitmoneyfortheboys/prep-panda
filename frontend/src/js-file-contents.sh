@@ -7,8 +7,8 @@ files=$(find . -type f -name '*.js')
 for file in $files; do
   filename=$(basename "$file")
   echo "$filename"
-  echo "```js"
+  # echo "```"
   cat "$file"
-  echo "```"
+  # echo "```"
   echo ""
 done
