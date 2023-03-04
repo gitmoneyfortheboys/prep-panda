@@ -19,3 +19,50 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
+
+
+@app.get('/api/questions')
+async def get_questions():
+    # Return questions as a JSON object
+    return questions
+
+questions =[
+    {
+        'id': 1,
+        'questionText': "What's 1+1?",
+        'answers': {
+            'A': '2',
+            'B': '3',
+            'C': '4',
+            'D': '5',
+        },
+        'correctAnswer': 'A',
+        'explanation': "It's 2 because 1+1=2.",
+    },
+    {
+        'id': 2,
+        'questionText': "What's the capital of France?",
+        'answers': {
+            'A': 'Paris', 
+            'B': 'Berlin',
+            'C': 'London',
+            'D': 'Rome',
+        },
+        'correctAnswer': 'A',
+        'explanation': "Paris is the capital of France.",
+    },
+    {
+        'id': 3,
+        'questionText': 'What is the largest ocean in the world?',
+        'answers': {
+            'A': 'Atlantic Ocean',
+            'B': 'Indian Ocean',
+            'C': 'Arctic Ocean',
+            'D': 'Pacific Ocean',
+        },
+        'correctAnswer': 'D',
+        'explanation': "The Pacific Ocean is the largest ocean in the world.",
+    },
+]
+
+print('test')

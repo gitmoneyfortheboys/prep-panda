@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useEffect } from 'react';
+import React, { createContext, useReducer, useEffect, useState } from 'react';
 
 const QuizContext = createContext();
 
@@ -45,17 +45,18 @@ const QuizProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    const storedState = JSON.parse(localStorage.getItem('quizState'));
-    if (storedState) {
-      dispatch({ type: 'SET_QUESTIONS', payload: storedState.questions });
-      dispatch({ type: 'SET_SCORE', payload: storedState.score });
-      dispatch({ type: 'SET_ANSWERS', payload: storedState.answers });
-    }
+    fetch('api/questions')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        dispatch({ type: 'SET_QUESTIONS', payload: data });
+      })
+      .catch(error => console.log(error));
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('quizState', JSON.stringify(quizState));
-  }, [quizState]);
+  // useEffect(() => {
+  //   localStorage.setItem('quizState', JSON.stringify(quizState));
+  // }, [quizState]);
 
   return (
     <QuizContext.Provider value={{ quizState, dispatch }}>

@@ -47,10 +47,10 @@ const AnswerButton = ({ answerText, answerKey, selectedAnswer, handleAnswerSelec
     );
 };
 
-function Quiz({ questions }) {
+function Quiz() {
     const { quizState, dispatch } = useContext(QuizContext);
     const { currentQuestion, answers, score } = quizState;
-    const question = questions[currentQuestion];
+    const question = quizState.questions[currentQuestion];
 
     const handleAnswerSelection = (e, answer) => {
         dispatch({ type: 'SELECT_ANSWER', payload: { id: question.id, answer } });
@@ -66,6 +66,10 @@ function Quiz({ questions }) {
     const handleNextQuestion = () => {
         dispatch({ type: 'SET_CURRENT_QUESTION', payload: currentQuestion + 1 });
     };
+
+    if (quizState.questions.length === 0) {
+        return <div>Loading questions...</div>;
+    }
 
     return (
         <Container>
@@ -88,7 +92,7 @@ function Quiz({ questions }) {
                             {answers[question.id].answer === question.correctAnswer ? (
                                 <div>
                                     <p>Correct!</p>
-                                    {currentQuestion < questions.length - 1 ? (
+                                    {currentQuestion < quizState.questions.length - 1 ? (
                                         <Button onClick={handleNextQuestion}>Next question</Button>
                                     ) : (
                                         <p>You've finished the quiz!</p>

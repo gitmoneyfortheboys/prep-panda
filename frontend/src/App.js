@@ -1,7 +1,6 @@
 import React from 'react';
 import Quiz from './quiz';
 import { QuizProvider } from './QuizProvider';
-import questions from './questions';
 
 
 
@@ -12,7 +11,7 @@ function App() {
 
       {/* <Quiz questions={questions} /> */}
       <QuizProvider>
-        <Quiz questions={questions} />
+        <Quiz />
       </QuizProvider>
     </div>
   );

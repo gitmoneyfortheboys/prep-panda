@@ -8,19 +8,27 @@ services:
   web:
     build:
       context: backend
-    # volumes:
-    ports:
-      - "8000:8000"
     depends_on:
       - postgres
+    volumes:
+      - ./backend:/app
+    command: ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
   frontend:
     build:
       context: frontend
-    ports:
-      - "3000:3000"
     depends_on:
       - web
     command: npm start
-# add volume mounts for each service so that the code is mounted into the container
     volumes:
       - ./frontend/src:/usr/src/app/my-app/src
+    ports:
+      - "3000:3000"
+  nginx:
+    image: nginx
+    volumes:
+      - ./backend/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - web
