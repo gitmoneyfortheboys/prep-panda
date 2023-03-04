@@ -59,9 +59,9 @@ function Quiz({ questions }) {
 
     const handleSubmit = (e, selectedAnswer) => {
         e.preventDefault();
-        const isCorrect = selectedAnswer === question.correctAnswer;
+        const isCorrect = selectedAnswer === question.correctAnswer
         dispatch({ type: 'SET_ANSWER_FEEDBACK', payload: { id: question.id, isCorrect } });
-    };
+      };
 
     const handleNextQuestion = () => {
         dispatch({ type: 'SET_CURRENT_QUESTION', payload: currentQuestion + 1 });
@@ -85,7 +85,7 @@ function Quiz({ questions }) {
                     </form>
                     {answers[question.id] && (
                         <Feedback>
-                            {answers[question.id] === question.correctAnswer ? (
+                            {answers[question.id].answer === question.correctAnswer ? (
                                 <div>
                                     <p>Correct!</p>
                                     {currentQuestion < questions.length - 1 ? (
