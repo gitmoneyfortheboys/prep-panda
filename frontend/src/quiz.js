@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { QuizContext } from './QuizProvider';
+import './styles.css';
 
 const Container = styled.div`
   display: flex;
@@ -8,8 +9,14 @@ const Container = styled.div`
   align-items: center;
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #3873FF;
   border-radius: 8px;
+
+  /* Apply vertical layout for mobile devices */
+
+  @media (max-width: 768px) {
+    flex-direction: column;    
+  }
 `;
 
 const Question = styled.h2`
@@ -27,6 +34,16 @@ const Button = styled.button`
   margin: 5px;
   cursor: pointer;
 `;
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+`;
+
+export { Wrapper };
 
 const Feedback = styled.div`
   margin-top: 20px;
