@@ -33,19 +33,26 @@ const Feedback = styled.div`
   font-size: 1rem;
 `;
 
-const AnswerButton = ({ answerText, answerKey, selectedAnswer, handleAnswerSelection }) => {
+const AnswerButton = ({
+    answerText,
+    answerKey,
+    selectedAnswer,
+    handleAnswerSelection,
+    isAnswered,
+  }) => {
     const isSelected = selectedAnswer === answerKey;
-
+  
     return (
-        <Button
-            type="button"
-            onClick={(e) => handleAnswerSelection(e, answerKey)}
-            selected={isSelected}
-        >
-            {answerKey}: {answerText}
-        </Button>
+      <Button
+        type="button"
+        onClick={(e) => handleAnswerSelection(e, answerKey)}
+        selected={isSelected}
+        disabled={isAnswered}
+      >
+        {answerKey}: {answerText}
+      </Button>
     );
-};
+  };  
 
 function Quiz() {
     const { quizState, dispatch } = useContext(QuizContext);
@@ -61,10 +68,12 @@ function Quiz() {
         e.preventDefault();
         const isCorrect = selectedAnswer === question.correctAnswer
         dispatch({ type: 'SET_ANSWER_FEEDBACK', payload: { id: question.id, isCorrect } });
+        dispatch({ type: 'SET_ANSWERED', payload: true})
       };
 
     const handleNextQuestion = () => {
         dispatch({ type: 'SET_CURRENT_QUESTION', payload: currentQuestion + 1 });
+        dispatch({ type: 'SET_ANSWERED', payload: false });
     };
 
     if (quizState.questions.length === 0) {
@@ -84,6 +93,7 @@ function Quiz() {
                                 answerText={value}
                                 selectedAnswer={answers[question.id]}
                                 handleAnswerSelection={handleAnswerSelection}
+                                isAnswered={quizState.answered}
                             />
                         ))}
                     </form>
@@ -92,7 +102,7 @@ function Quiz() {
                             {answers[question.id].answer === question.correctAnswer ? (
                                 <div>
                                     <p>Correct!</p>
-                                    {currentQuestion < quizState.questions.length - 1 ? (
+                                    {currentQuestion < quizState.questions.length ? (
                                         <Button onClick={handleNextQuestion}>Next question</Button>
                                     ) : (
                                         <p>You've finished the quiz!</p>
@@ -111,7 +121,7 @@ function Quiz() {
             ) : (
                 <div>
                     <p>You've finished the quiz!</p>
-                    <p>Your score: {score} out of {questions.length}</p>
+                    <p>Your score: {score} out of {quizState.questions.length}</p>
                 </div>
             )}
         </Container>

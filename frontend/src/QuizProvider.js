@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useEffect, useState } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 
 const QuizContext = createContext();
 
@@ -25,6 +25,8 @@ const quizReducer = (state, action) => {
       };
     case 'SET_CURRENT_QUESTION':
       return { ...state, currentQuestion: action.payload };
+    case 'SET_ANSWERED':
+      return { ...state, answered: action.payload };
     case 'RESET_QUIZ':
       return { ...state, questions: [], currentQuestion: 0, answers: {}, score: 0 };
     case 'RESET_SCORE':
@@ -42,6 +44,7 @@ const QuizProvider = ({ children }) => {
     currentQuestion: 0,
     answers: {},
     score: 0,
+    answered: false,
   });
 
   useEffect(() => {
