@@ -1,15 +1,16 @@
 import React from 'react';
 import Quiz from './quiz';
 import { QuizProvider } from './QuizProvider';
-import { Wrapper } from './quiz'; // Import the Wrapper styled component
+import { Wrapper } from './quiz';
+import BottomNavBar from './BottomNavBar';
 
 function App() {
   return (
     <Wrapper>
       <QuizProvider>
-        {/* <Quiz questions={questions} /> */}
         <Quiz />
       </QuizProvider>
+      <BottomNavBar />
     </Wrapper>
   );
 }
