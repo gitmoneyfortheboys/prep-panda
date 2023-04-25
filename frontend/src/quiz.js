@@ -39,9 +39,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   width: 100%;
+  min-height: calc(100vh - 60px);
+  background-color: #D7F2F3;
 `;
+
 
 export { Wrapper };
 

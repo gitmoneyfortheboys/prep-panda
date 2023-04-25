@@ -9,10 +9,11 @@ const NavBarContainer = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%; // Add this line to make the BottomNavBar span the entire width
   height: 60px;
-  background-color: #D7F2F3; // Change this to your desired background color
+  background-color: #D7F2F3;
   border-top: 1px solid #3873FF;
+  box-sizing: border-box; // Add this line to include border in the overall width calculation
 `;
 
 const NavItem = styled(Link)`
