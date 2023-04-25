@@ -1,5 +1,10 @@
 # Prerequisites
 
+
+After cloning from Git, run 'npm install' to generate the node_modules folder. This is necessary to run the app.
+
+Run npm audit to see vulnerabilities. We need to address the 20 high and 9 critical attention vulnerabilities at some point. Ensure backup before running npm audit fix or npm audit fix --force.
+
 All Variables:
 - int: question_id
     - answer_a = answer_a(question_id)

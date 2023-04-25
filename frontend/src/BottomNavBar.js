@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ const NavBarContainer = styled.div`
   border-top: 1px solid #3873FF;
 `;
 
-const NavItem = styled.a`
+const NavItem = styled(Link)`
   text-decoration: none;
   color: #333;
   font-size: 1rem;
@@ -24,9 +25,9 @@ const NavItem = styled.a`
 function BottomNavBar() {
   return (
     <NavBarContainer>
-      <NavItem href="#">Home</NavItem>
-      <NavItem href="#">Progress</NavItem>
-      <NavItem href="#">Account</NavItem>
+      <NavItem to="/">Home</NavItem>
+      <NavItem to="/progress">Progress</NavItem>
+      <NavItem to="/account">Account</NavItem>
     </NavBarContainer>
   );
 }
