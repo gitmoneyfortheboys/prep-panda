@@ -28,4 +28,3 @@ Accessibility: Ensure your app is accessible to all users. This includes adding 
 Performance: Make sure your app performs well and loads quickly. Use tools like Google Lighthouse to audit your app's performance and follow their recommendations for improvement.
 
 Next prompt:
-

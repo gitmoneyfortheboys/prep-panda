@@ -35,6 +35,30 @@ const Button = styled.button`
   border-radius: 8px;
   margin: 5px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--primary-colour); /* use primary color on hover */
+    color: #fff; /* text color white on hover */
+  }
+
+  &:active {
+    background-color: var(--secondary-colour); /* use secondary color on active */
+    color: #fff; /* text color white on active */
+  }
+
+  &:focus {
+    outline: 2px solid #3873FF;  /* your secondary color */
+  }
+
+  &:disabled {
+    background-color: #ccc; /* grayed out when disabled */
+    color: #888;
+    border: 1px solid #aaa;
+    cursor: not-allowed;
+  }
+
   /* Adjust the typography for mobile devices */
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -51,7 +75,7 @@ const Wrapper = styled.div`
 `;
 
 
-export { Wrapper };
+export { Wrapper, Button };
 
 const Feedback = styled.div`
   margin-top: 20px;

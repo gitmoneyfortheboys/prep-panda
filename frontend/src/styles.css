@@ -1,5 +1,14 @@
 /* styles.css */
 
+:root {
+  --background-colour: #D7F2F3;
+  --primary-colour: #429cfcad;
+  --secondary-colour: #3874ffba;
+  --success-colour: #72E46;
+  --warning-colour: #FFBC14;
+  --wrong-colour: #FF5E79;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #d7f2f3;
