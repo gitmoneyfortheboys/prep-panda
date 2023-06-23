@@ -1,29 +1,73 @@
+/* styles.css */
+
 body {
-  background-color:#d7f2f3;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d7f2f3;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
 
+p, a, div {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p, a, div {
+  font-size: 1rem;
+}
+
+/* Adjust the typography for mobile devices */
 @media (max-width: 768px) {
-    /* Adjust font sizes */
-    h2 {
-      font-size: 1rem;
-    }
-  
-    label {
-      font-size: 0.9rem;
-    }
-  
-    button {
-      font-size: 1rem;
-    }
-  
-    /* Adjust container size */
-    div {
-      width: 90%;
-    }
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p, a, div {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust font sizes */
+  h2 {
+    font-size: 1rem;
   }
   
+  label {
+    font-size: 0.9rem;
+  }
+  
+  button {
+    font-size: 1rem;
+  }
+  
+  /* Adjust container size */
+  div {
+    width: 90%;
+  }
+}
+ 
   /* Colour scheme:
 Primary: #D7F2F3 (shade of light cyan)
 Secondary colour - Box outlines/info/general outlines: #3873FF

@@ -11,28 +11,34 @@ const Container = styled.div`
   padding: 20px;
   border: 1px solid #3873FF;
   border-radius: 8px;
-
   /* Apply vertical layout for mobile devices */
-
   @media (max-width: 768px) {
-    flex-direction: column;    
+    flex-direction: column;
   }
 `;
 
+/* Question */
 const Question = styled.h2`
-  font-size: 1.2rem;
   margin-bottom: 10px;
+  /* Adjust the typography for mobile devices */
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
+/* Button */
 const Button = styled.button`
   padding: 10px;
-  font-size: 1rem;
   background-color: ${(props) => (props.selected ? '#0077cc' : '#fff')};
   color: ${(props) => (props.selected ? '#fff' : '#0077cc')};
   border: 1px solid #0077cc;
   border-radius: 8px;
   margin: 5px;
   cursor: pointer;
+  /* Adjust the typography for mobile devices */
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Wrapper = styled.div`

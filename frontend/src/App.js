@@ -7,6 +7,7 @@ import HomePage from './HomePage';
 import ProgressPage from './ProgressPage';
 import AccountPage from './AccountPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './styles.css';
 
 function App() {
   return (
