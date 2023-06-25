@@ -2,7 +2,7 @@ import React from 'react';
 import Quiz from './quiz';
 import { QuizProvider } from './QuizProvider';
 import { Wrapper } from './quiz';
-import BottomNavBar from './BottomNavBar';
+import TopNavBar from './TopNavBar';
 import HomePage from './HomePage';
 import ProgressPage from './ProgressPage';
 import AccountPage from './AccountPage';
@@ -12,6 +12,7 @@ import './styles.css';
 function App() {
   return (
     <Router>
+      <TopNavBar />
       <Wrapper>
         <QuizProvider>
           <Routes>
@@ -21,7 +22,6 @@ function App() {
             <Route path="/account" element={<AccountPage />} />
           </Routes>
         </QuizProvider>
-        <BottomNavBar />
       </Wrapper>
     </Router>
   );

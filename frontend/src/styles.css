@@ -1,7 +1,7 @@
 /* styles.css */
 
 :root {
-  --background-colour: #D7F2F3;
+  --background-colour: #ffffff;
   --primary-colour: #429cfcad;
   --secondary-colour: #3874ffba;
   --success-colour: #72E46;
@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #d7f2f3;
+  background-color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,11 +77,3 @@ p, a, div {
   }
 }
  
-  /* Colour scheme:
-Primary: #D7F2F3 (shade of light cyan)
-Secondary colour - Box outlines/info/general outlines: #3873FF
-Success: #72E46 (green)
-Warning: #FFBC14 (orange)
-Wrong answers: #FF5E79
-
-  */ 

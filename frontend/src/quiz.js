@@ -71,7 +71,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   min-height: calc(100vh - 60px);
-  background-color: #D7F2F3;
+  background-color: var(--background-colour);
 `;
 
 
