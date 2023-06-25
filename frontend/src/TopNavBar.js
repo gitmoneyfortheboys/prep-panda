@@ -32,7 +32,12 @@ const NavButtonContainer = styled(Link)`
   &:first-child {
     margin-left: 50px; // Increase left margin for the first item
   }
+
+  &:hover {
+    color: var(--primary-colour);
+  }
 `;
+
 
 const LogoContainer = styled.div`
   width: 82px;
