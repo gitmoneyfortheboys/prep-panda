@@ -20,7 +20,7 @@ services:
       - web
     command: npm start
     volumes:
-      - ./frontend/src:/usr/src/app/my-app/src
+      - ./frontend:/usr/src/app/my-app
     ports:
       - "3000:3000"
   nginx:

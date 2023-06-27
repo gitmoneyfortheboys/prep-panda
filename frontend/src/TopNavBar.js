@@ -12,11 +12,14 @@ const NavBarContainer = styled.div`
   left: 0;
   width: 100%;
   height: 59px;
-  background-color: var(--background-color);
+  background-color: white; // You can replace 'white' with any color you want
   border-bottom: 1px solid lightgray;
   padding: 0 10px; // Padding around the content
   box-sizing: border-box;
+  z-index: 10;
 `;
+
+
 
 const NavButtonContainer = styled(Link)`
   display: flex;

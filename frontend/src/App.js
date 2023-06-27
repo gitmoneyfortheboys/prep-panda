@@ -7,7 +7,7 @@ import HomePage from './HomePage';
 import ProgressPage from './ProgressPage';
 import AccountPage from './AccountPage';
 import Footer from './Footer'; // Don't forget to import Footer here
-import ContactPage from './ContactPage'
+import ContactPage from './ContactPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles.css';
 
