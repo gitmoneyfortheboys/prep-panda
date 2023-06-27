@@ -39,18 +39,19 @@ const NavButtonContainer = styled(Link)`
 `;
 
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(Link)`
   width: 82px;
   height: 59px;
   background-image: url(${Logo});
   background-size: cover;
   background-position: center;
+  text-decoration: none;
 `;
 
 function TopNavBar() {
   return (
     <NavBarContainer>
-      <LogoContainer />
+      <LogoContainer to="/" />
       <NavButtonContainer to="/">Subjects</NavButtonContainer>
       <NavButtonContainer to="/progress">Progress</NavButtonContainer>
     </NavBarContainer>

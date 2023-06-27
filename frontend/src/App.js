@@ -6,6 +6,8 @@ import TopNavBar from './TopNavBar';
 import HomePage from './HomePage';
 import ProgressPage from './ProgressPage';
 import AccountPage from './AccountPage';
+import Footer from './Footer'; // Don't forget to import Footer here
+import ContactPage from './ContactPage'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles.css';
 
@@ -20,9 +22,11 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/account" element={<AccountPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </QuizProvider>
       </Wrapper>
+      <Footer />
     </Router>
   );
 }
