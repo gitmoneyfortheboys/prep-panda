@@ -70,11 +70,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: calc(100vh - 59px);
   background-color: var(--background-colour);
   padding-top: 59px; // This offsets your content below the header
-  margin-top: 59px; // Add this line to prevent content from scrolling under the nav bar
+  padding-bottom: 59px; // Add bottom padding to account for footer
 `;
+
+
 
 
 
