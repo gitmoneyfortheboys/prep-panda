@@ -16,8 +16,10 @@ const NavBarContainer = styled.div`
   border-bottom: 1px solid lightgray;
   padding: 0 10px; // Padding around the content
   box-sizing: border-box;
-  z-index: 10;
+  z-index: 100;
+  box-shadow: 0px 2px 10px var(--primary-colour); // Bottom shadow
 `;
+
 
 
 
