@@ -2,6 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 
+
+const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; // 3 columns for larger screens
+  grid-gap: 1rem; // gap between the cards
+  margin: 1rem;
+
+  // Make it responsive for smaller screens, stacking cards vertically
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // single column layout for smaller screens
+  }
+`;
+
 const Card = styled.div`
   background: #fff;
   border-radius: 10px;
@@ -9,10 +22,10 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 270px;
   margin: 1rem;
   padding: 20px;
-  width: 300px;
+  width: 270px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1); // Shadow effect
   transition: 0.3s; // Transition effect for hover
   
@@ -42,6 +55,7 @@ function ProgressPage() {
   return (
     <div>
       <h1>Here's your progress so far:</h1>
+      <CardContainer>
       <Card>
         <Title>Number of Questions Completed</Title>
         <Value>120</Value> 
@@ -88,6 +102,7 @@ function ProgressPage() {
         <Title>Total Points</Title>
         <Value>1000</Value>
       </Card>
+      </CardContainer>
     </div>
   );
 }
