@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Button } from './quiz'; // Import Button from quiz.js
+import { PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
 
 const CardContainer = styled.div`
@@ -13,6 +15,20 @@ const CardContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr; // single column layout for smaller screens
   }
+`;
+
+const CenteredButton = styled(Button)`
+  margin-top: 30px; // add some top margin
+  text-decoration: none; // remove underline
+  font-size: 2rem; // double the original font size
+  padding: 20px; // double the padding
+  width: 100%; // set width to 100%
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Card = styled.div`
@@ -55,6 +71,8 @@ function ProgressPage() {
 
   // Array of colors for the cards
   const cardColors = ["#9FD725", "#EFEFEF", "#3454D1", "#070707", "#3874ffba", "#E09F3E"];
+
+  const areaOfFocus = data.reduce((prev, current) => prev.value > current.value ? prev : current).name;
   
   return (
     <div>
@@ -107,6 +125,14 @@ function ProgressPage() {
         <Value textColor="#FFFFFF">1000</Value>
       </Card>
       </CardContainer>
+
+      <ButtonContainer>
+        <Link to="/quiz">
+          <CenteredButton>
+            Progress my {areaOfFocus}
+          </CenteredButton>
+        </Link>
+      </ButtonContainer>
     </div>
   );
 }
