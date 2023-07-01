@@ -7,16 +7,21 @@ import './styles.css';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 50px auto; // Change here, 50px can be replaced with any space you need
   padding: 20px;
   border: 1px solid var(--secondary-colour);
   border-radius: 8px;
-  
+  width: 80%;
+  max-width: 800px;
+
   @media (max-width: 768px) {
-    flex-direction: column;
+    width: 95%;
+    margin: 30px auto; // If you want to have less space in mobile view, adjust accordingly
   }
 `;
+
 
 const ContactHeader = styled.h2`
   margin-bottom: 20px;
@@ -29,7 +34,7 @@ const ContactHeader = styled.h2`
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%; // should be 100% to use the full width of the Container
 `;
 
 const FormField = styled.div`
@@ -42,19 +47,21 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
+  box-sizing: border-box; // added this
   padding: 10px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid var(--secondary-colour);
-  width: 100%;
+  width: 100%; // it should be 100% to fill the width of ContactForm
 `;
 
 const TextArea = styled.textarea`
+  box-sizing: border-box; // added this
   padding: 10px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid var(--secondary-colour);
-  width: 100%;
+  width: 100%; // it should be 100% to fill the width of ContactForm
   height: 150px;
 `;
 

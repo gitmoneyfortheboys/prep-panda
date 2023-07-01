@@ -21,9 +21,11 @@ const CenteredButton = styled(Button)`
   margin-top: 30px; // add some top margin
   text-decoration: none; // remove underline
   font-size: 2rem; // double the original font size
+  font-family: 'Roboto Slab', sans-serif; // add this line
   padding: 20px; // double the padding
   width: 100%; // set width to 100%
 `;
+
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -112,7 +114,7 @@ function ProgressPage() {
 
       <Card background={cardColors[1]} textColor = "#000000">
         <Title textColor="#000000">Best Subject</Title>
-        <Value textColor="#000000">Math</Value>
+        <Value textColor="#000000">Reading</Value>
       </Card>
 
       <Card background={cardColors[2]} textColor="#FFFFFF">
