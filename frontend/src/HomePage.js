@@ -12,7 +12,7 @@ const SubjectsContainer = styled.div`
 const SubjectBox = styled.div`
   width: 244px;
   height: 254px;
-  border: 1px solid #3873FF;
+  border: 1px solid var(--primary-colour);
   border-radius: 8px;
   margin: 10px;
   display: flex;

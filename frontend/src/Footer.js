@@ -16,9 +16,9 @@ const StyledFooter = styled.footer`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #0077cc;
+  color: var(--primary-colour);
   &:hover {
-    color: #005999;
+    color: var(--secondary-colour));
   }
 `;
 

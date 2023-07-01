@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
   margin: 20px;
   padding: 20px;
-  border: 1px solid #3873FF;
+  border: 1px solid var(--primary-colour);
   border-radius: 8px;
   /* Apply vertical layout for mobile devices */
   @media (max-width: 768px) {
