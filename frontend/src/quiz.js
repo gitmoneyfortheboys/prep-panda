@@ -79,11 +79,28 @@ const Wrapper = styled.div`
 `;
 
 
+const QuizButton = styled(Button)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 16px;
+  min-width: 538px;
+  min-height: 50px;
+  text-align: left;
+  font-size: 16px;
+
+  &:hover,
+  &:focus,
+
+  /* Adjust the typography for mobile devices */
+  @media (max-width: 768px) {
+    min-width: auto;
+    width: 100%;
+  }
+`;
 
 
-
-
-export { Wrapper, Button };
+export { Wrapper, Button , QuizButton};
 
 const Feedback = styled.div`
   margin-top: 20px;
@@ -91,25 +108,25 @@ const Feedback = styled.div`
 `;
 
 const AnswerButton = ({
-    answerText,
-    answerKey,
-    selectedAnswer,
-    handleAnswerSelection,
-    isAnswered,
-  }) => {
-    const isSelected = selectedAnswer === answerKey;
-  
-    return (
-      <Button
-        type="button"
-        onClick={(e) => handleAnswerSelection(e, answerKey)}
-        selected={isSelected}
-        disabled={isAnswered}
-      >
-        {answerKey}: {answerText}
-      </Button>
-    );
-  };  
+  answerText,
+  answerKey,
+  selectedAnswer,
+  handleAnswerSelection,
+  isAnswered,
+}) => {
+  const isSelected = selectedAnswer === answerKey;
+
+  return (
+    <QuizButton
+      type="button"
+      onClick={(e) => handleAnswerSelection(e, answerKey)}
+      selected={isSelected}
+      disabled={isAnswered}
+    >
+      <span>{answerKey}:</span> <span>{answerText}</span>
+    </QuizButton>
+  );
+};  
 
 function Quiz() {
     const { quizState, dispatch } = useContext(QuizContext);
