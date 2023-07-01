@@ -30,30 +30,31 @@ const Question = styled.h2`
 const Button = styled.button`
   padding: 10px;
   background-color: ${(props) => (props.selected ? '#0077cc' : '#fff')};
-  color: ${(props) => (props.selected ? '#fff' : '#0077cc')};
-  border: 1px solid #0077cc;
-  border-radius: 8px;
+  color: black; // Text color always black
+  border: 1px solid lightgrey; // Changed border color to lightgrey
+  border-radius: 2px; // Reduced border radius
   margin: 5px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
 
   &:hover {
-    background-color: var(--primary-colour); /* use primary color on hover */
-    color: #fff; /* text color white on hover */
+    border-color: var(--primary-colour); // Change the border color on hover
+    // No background color change on hover
   }
 
   &:active {
-    background-color: var(--secondary-colour); /* use secondary color on active */
-    color: #fff; /* text color white on active */
+    background-color: var(--secondary-colour); // Use secondary color on active
+    border-color: var(--secondary-colour); // Change the border color on active
   }
 
   &:focus {
-    outline: 2px solid #3873FF;  /* your secondary color */
+    outline: none;  // Removes the outline
+    border-color: var(--primary-colour); // Change the border color on focus
   }
 
   &:disabled {
-    background-color: #ccc; /* grayed out when disabled */
+    background-color: #ccc; // Grayed out when disabled
     color: #888;
     border: 1px solid #aaa;
     cursor: not-allowed;
@@ -64,6 +65,8 @@ const Button = styled.button`
     font-size: 0.9rem;
   }
 `;
+
+
 
 const Wrapper = styled.div`
   display: flex;
