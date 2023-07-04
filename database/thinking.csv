@@ -1,0 +1,55 @@
+﻿question,question_image_1,question_image_2,question_image_3,choice_a,choice_b,choice_c,choice_d,choice_e,correct_answer,explanation,explanation_image,question_number,paper_id
+"Kai, Joe and Alice have 30 marbles each.
+They take it in turns to roll a dice.
+● If the number rolled is even, then that player has to give the number of marbles shown on the
+face of the dice to each of the other two players.
+● If the number rolled is odd, then that player receives the number of marbles shown on the
+face of the dice from each of the other two players.
+Kai rolls a 5.
+Joe rolls a 2.
+If the friends end up with 41, 20 and 29 marbles respectively, which number does Alice roll?",,,,1,2,3,4,,A,"When Kai rolled a 5, he received 5 marbles from each of Joe and Alice.
+When Joe rolled a 2, he gave 2 marbles to each of Kai and Alice.
+The outcome of Alice’s roll can be worked out by considering any one of the
+three friends:
+After the second roll Kai had 42 marbles. For him to finish with 41
+marbles, he must have given 1 marble to Alice as a result of Alice’s roll.
+After the second roll Joe had 21 marbles. For him to finish with 20
+marbles, he must have given 1 marble to Alice as a result of Alice’s roll.
+After the second roll Alice had 27 marbles, so she must have received
+2 marbles as a result of her roll (one from each of Kai and Joe).
+Alice must therefore have rolled a 1, which is option A. ",,1,1
+"When Tom told Aida that he was thinking of giving up his hobby of drawing to focus on
+becoming an engineer, Aida said: “You don’t need to give up a hobby like drawing just because
+you want to work in engineering. It’s good for you to have hobbies. They help keep you happy
+and relaxed so you can also study harder.”
+Which one of these statements, if true, most strengthens Aida’s argument? ",,,,Artistic or creative skills are seen as important skills for engineers to have. ,Tom’s latest school report said that he wasn’t studying hard enough. ,Tom’s school encourages its students to have at least one hobby. ,Learning to draw well also often takes hard work and concentration.,,A,"Aida says that one benefit of hobbies is that they help keep you happy and
+relaxed and that this enables you to study harder. Her argument is
+strengthened if there is another reason why it would be beneficial for Tom to
+continue with his hobby of drawing.
+If artistic or creative skills are seen as important skills for engineers to have,
+then continuing with a hobby that practises those skills would be beneficial for
+Tom, so option A strengthens the argument.",,2,1
+"“Whoever stole the money must have had both an opportunity and a motive.”
+If this is true, which one of these sentences must also be true?",,,,"If Finn had both an opportunity and a motive, he must have stolen the money. ","If Finn did not steal the money, he cannot have had an opportunity. ","If Finn did not steal the money, he cannot have had a motive. ","If Finn did not have a motive, he cannot have stolen the money. ",,D,"If the person who stole the money must have had both an opportunity and a
+motive, then anyone who does not have either of those cannot be the person
+who stole the money. Option D is an example of this.",,3,1
+"At the end of each term, Mr Chen gives scores in reading and writing to each student in his
+English class. These two scores are then added together to give an overall score in English
+for the term (for example, a student with scores of 30 in reading and 40 in writing would have
+an overall score of 70 in English).
+Last term, Sara and Mila got the same overall score in English. ~ Sara: “If our scores in writing were different from each other, then our scores in reading must
+have been different too.”
+Mila: “And if our scores in reading were the same, then our scores in writing must have been
+the same too.”
+If the information in the box is true, whose reasoning is correct? ",./images/1_5_q1.png,,,Sara only,Mila only,Both Sara and Mila,Neither Sara nor Mila,,C,"Sara: If the scores in writing were different, but the scores in reading were the
+same, then the totals could not be equal. So Sara’s statement must be
+true.
+Mila: If the scores in reading were the same, but the scores in writing were
+different, then the totals could not be equal. So Mila’s statement must
+be true.
+Therefore both statements must be true, which is option C. ",,5,1
+"Shown below are the three small pieces of a puzzle. ~ Which one of the following big pieces can be combined with the three small pieces to make a
+square? ",./images/1_10_q1.png,,,./images/1_10_aa.png,./images/1_10_ab.png,./images/1_10_ac.png,./images/1_10_ad.png,,B,"No right angles in the shapes are in positions that could be corners of the
+completed square, so it must be the case that the corners of the square are
+made by putting two of the 45-degree corners together. The only way that the
+three pieces could fit together is as shown: ~ The gap that is left is then filled by option B.",./images/1_10_e1.png,10,1

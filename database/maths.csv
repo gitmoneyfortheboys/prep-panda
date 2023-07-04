@@ -1,0 +1,11 @@
+﻿question,question_image,choice_a,choice_b,choice_c,choice_d,choice_e,correct_answer,explanation,explanation_image_1,explanation_image_2,question_number,paper_id
+"Sandy’s watch reads 1850.
+What is the time one quarter of an hour later, in 12-hour format? ",,6:35 am,7:05 am,6:35 pm,6:45 pm,7:05 pm,E,"Working with the 24-hour clock and then converting: One quarter of an hour is 15 minutes. 10 minutes after 1850 is 1900, so 15 minutes after 1850 is 1905. In the 12-hour format, 1905 is 7:05 pm, so the correct answer is E 7:05 pm. Alternatively, converting to the 12-hour clock first: Sandy’s watch reads 1850 which is 6 hours after 1200 so it is 6:50 pm. Adding on 15 minutes takes us to 7:05 pm.",,,1,2
+"Jack divides a white wall into equal sections.
+He paints some sections purple, as shown. ~ Jack then paints 2/5 of the whole wall yellow.
+Finally, he paints the rest of the wall green.
+How many sections does he paint green? ",./images/2_2_q1.png,1,2,3,4,5,A,"The wall has ten equal sections. Jack paints 2/5 of the whole wall yellow; this is
+the same as 4/10 so Jack paints 4 sections yellow. The diagram below shows 2/5
+and 4/10 are equivalent: ~ Jack paints 5 sections purple and 4 sections yellow. This leaves just one
+section to be painted green. So Jack paints 1 section green, and the correct
+answer is A 1. ~",./images/2_2_e1.png,./images/2_2_e2.png,2,2
