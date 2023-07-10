@@ -1,7 +1,9 @@
+import csv
 from fastapi import FastAPI
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import os
 
 DATABASE_URL = "postgresql://user:password@postgres:5432/database"
 
@@ -20,49 +22,35 @@ def read_root():
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 
-
 @app.get('/api/questions')
 async def get_questions():
+    print(os.getcwd())
+    print(os.path.exists('/app/database/maths.csv'))  # Replace the path with the path you want to check
+    # Read questions from the CSV file
+    questions = []
+    with open('/app/database/maths.csv', newline='', encoding='utf-8-sig') as csvfile:
+        reader = csv.DictReader(csvfile)
+        id = 1
+        for row in reader:
+            print(row.keys())
+            try:
+                question = {
+                    'id': id,
+                    'questionText': row['question'],
+                    'answers': {
+                        'A': row['choice_a'],
+                        'B': row['choice_b'],
+                        'C': row['choice_c'],
+                        'D': row['choice_d'],
+                    },
+                    'correctAnswer': row['correct_answer'],
+                    'explanation': row['explanation'],
+                }
+                questions.append(question)
+                id += 1
+            except KeyError as e:
+                print(f"Missing key {e} in row {id}: {row}")
     # Return questions as a JSON object
     return questions
 
-questions =[
-    {
-        'id': 1,
-        'questionText': "What's 1+1?",
-        'answers': {
-            'A': '2',
-            'B': '3',
-            'C': '4',
-            'D': '5',
-        },
-        'correctAnswer': 'A',
-        'explanation': "It's 2 because 1+1=2.",
-    },
-    {
-        'id': 2,
-        'questionText': "What's the capital of France?",
-        'answers': {
-            'A': 'Paris', 
-            'B': 'Berlin',
-            'C': 'London',
-            'D': 'Rome',
-        },
-        'correctAnswer': 'A',
-        'explanation': "Paris is the capital of France.",
-    },
-    {
-        'id': 3,
-        'questionText': 'What is the largest ocean in the world?',
-        'answers': {
-            'A': 'Atlantic Ocean',
-            'B': 'Indian Ocean',
-            'C': 'Arctic Ocean',
-            'D': 'Pacific Ocean',
-        },
-        'correctAnswer': 'D',
-        'explanation': "The Pacific Ocean is the largest ocean in the world.",
-    },
-]
 
-print('test')
