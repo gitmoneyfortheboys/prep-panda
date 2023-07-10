@@ -146,9 +146,10 @@ function Quiz() {
       };
 
     const handleNextQuestion = () => {
-        dispatch({ type: 'SET_CURRENT_QUESTION', payload: currentQuestion + 1 });
-        dispatch({ type: 'SET_ANSWERED', payload: false });
-    };
+      const nextQuestionIndex = currentQuestion + 1 < quizState.questions.length ? currentQuestion + 1 : 0;
+      dispatch({ type: 'SET_CURRENT_QUESTION', payload: nextQuestionIndex });
+      dispatch({ type: 'SET_ANSWERED', payload: false });
+      };
 
     if (quizState.questions.length === 0) {
         return <div>Loading questions...</div>;

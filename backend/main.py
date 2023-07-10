@@ -1,4 +1,5 @@
 import csv
+import random
 from fastapi import FastAPI
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -50,6 +51,7 @@ async def get_questions():
                 id += 1
             except KeyError as e:
                 print(f"Missing key {e} in row {id}: {row}")
+    random.shuffle(questions)
     # Return questions as a JSON object
     return questions
 
