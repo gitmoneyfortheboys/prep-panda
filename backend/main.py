@@ -43,6 +43,7 @@ async def get_questions():
                         'B': row['choice_b'],
                         'C': row['choice_c'],
                         'D': row['choice_d'],
+                        'E': row.get('choice_e', ''),
                     },
                     'correctAnswer': row['correct_answer'],
                     'explanation': row['explanation'],

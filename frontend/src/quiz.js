@@ -147,10 +147,11 @@ function Quiz() {
 
     const handleNextQuestion = () => {
       const nextQuestionIndex = currentQuestion + 1 < quizState.questions.length ? currentQuestion + 1 : 0;
-      dispatch({ type: 'SET_CURRENT_QUESTION', payload: nextQuestionIndex });
-      dispatch({ type: 'SET_ANSWERED', payload: false });
-      };
-
+        dispatch({ type: 'SET_CURRENT_QUESTION', payload: nextQuestionIndex });
+        dispatch({ type: 'SET_ANSWERED', payload: false });
+        dispatch({ type: 'REMOVE_ANSWER', payload: quizState.questions[currentQuestion].id });
+    };
+    
     if (quizState.questions.length === 0) {
         return <div>Loading questions...</div>;
     }

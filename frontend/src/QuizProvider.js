@@ -33,6 +33,10 @@ const quizReducer = (state, action) => {
       return { ...state, score: 0 };
     case 'RESET_ANSWERS':
       return { ...state, answers: {} };
+    case 'REMOVE_ANSWER':
+      const newAnswers = {...state.answers};
+      delete newAnswers[action.payload];
+      return {...state, answers: newAnswers};
     default:
       return state;
   }
