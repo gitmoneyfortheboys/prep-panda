@@ -4,8 +4,8 @@ What is the time one quarter of an hour later, in 12-hour format? ",,6:35 am,7:0
 "Jack divides a white wall into equal sections.
 He paints some sections purple, as shown. ~ Jack then paints 2/5 of the whole wall yellow.
 Finally, he paints the rest of the wall green.
-How many sections does he paint green? ",./images/2_2_q1.png,1,2,3,4,5,A,"The wall has ten equal sections. Jack paints 2/5 of the whole wall yellow; this is
+How many sections does he paint green? ",2_2_q1.png,1,2,3,4,5,A,"The wall has ten equal sections. Jack paints 2/5 of the whole wall yellow; this is
 the same as 4/10 so Jack paints 4 sections yellow. The diagram below shows 2/5
 and 4/10 are equivalent: ~ Jack paints 5 sections purple and 4 sections yellow. This leaves just one
 section to be painted green. So Jack paints 1 section green, and the correct
-answer is A 1. ~",./images/2_2_e1.png,./images/2_2_e2.png,2,2
+answer is A 1. ~",2_2_e1.png,2_2_e2.png,2,2
