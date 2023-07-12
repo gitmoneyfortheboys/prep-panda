@@ -158,6 +158,7 @@ function Quiz() {
 
     return (
         <Container>
+            <div>Score: {score}</div>
             {question ? (
                 <div>
                     <Question>{question.questionText}</Question>
@@ -195,10 +196,7 @@ function Quiz() {
                     )}
                 </div>
             ) : (
-                <div>
-                    <p>You've finished the quiz!</p>
-                    <p>Your score: {score} out of {quizState.questions.length}</p>
-                </div>
+                <div>Quiz complete!</div>
             )}
         </Container>
     );
