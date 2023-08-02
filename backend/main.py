@@ -38,6 +38,7 @@ async def get_questions():
                 question = {
                     'id': id,
                     'questionText': row['question'],
+                    'questionImage': row['question_image'],
                     'answers': {
                         'A': row['choice_a'],
                         'B': row['choice_b'],
@@ -47,6 +48,7 @@ async def get_questions():
                     },
                     'correctAnswer': row['correct_answer'],
                     'explanation': row['explanation'],
+                    'explanationImage': row['explanation_image'],
                 }
                 questions.append(question)
                 id += 1
