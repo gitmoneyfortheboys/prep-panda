@@ -28,3 +28,9 @@ Accessibility: Ensure your app is accessible to all users. This includes adding 
 Performance: Make sure your app performs well and loads quickly. Use tools like Google Lighthouse to audit your app's performance and follow their recommendations for improvement.
 
 Next prompt:
+
+1. Get Github Copilot X
+2. Serve the images on the frontend in the quiz component. First, test serving them as normal to see if they work. Second, adjust positioning of the image so that it is located to the right of the question text.
+
+
+3. Just dynamically update the UI as I go, one update at a time.
